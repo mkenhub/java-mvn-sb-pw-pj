@@ -36,3 +36,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Node / Playwright ###
+node_modules/
+playwright-report/
+test-results/
+ui-tests/node_modules/
+ui-tests/playwright-report/
+ui-tests/test-results/

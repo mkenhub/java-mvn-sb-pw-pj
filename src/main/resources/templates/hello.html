@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Hello Sample</title>
+    <script th:src="@{/js/hello.js}" defer></script>
+</head>
+<body>
+<header>
+    <h1 data-testid="hello-title">Hello Sample</h1>
+    <p>Playwright用の簡易ページです。</p>
+</header>
+<main>
+    <section>
+        <button id="hello-button" data-testid="hello-button">/hello を呼び出す</button>
+        <div id="hello-result" data-testid="hello-result" aria-live="polite">未取得</div>
+    </section>
+</main>
+</body>
+</html>
