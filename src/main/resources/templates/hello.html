@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${pageTitle}">Hello Sample</title>
+    <link th:href="@{/css/hello.css}" rel="stylesheet">
+    <script th:src="@{/js/hello.js}" defer></script>
 </head>
 <body>
 <header>
@@ -12,11 +14,20 @@
 </header>
 <main>
     <section>
-        <a href="/hello-page?fetch=true">
-            <button id="hello-button" data-testid="hello-button">/hello を呼び出す</button>
-        </a>
+        <button id="hello-button" data-testid="hello-button">/hello を呼び出す</button>
         <div id="hello-result" data-testid="hello-result" aria-live="polite" th:text="${helloMessage}">未取得</div>
     </section>
 </main>
+
+<!-- カスタム確認ダイアログ -->
+<div id="confirm-dialog" data-testid="confirm-dialog" role="dialog" aria-modal="true">
+    <div class="dialog-content">
+        <div class="dialog-message" data-testid="dialog-message">Hello APIを呼び出しますか？</div>
+        <div class="dialog-buttons">
+            <button id="confirm-ok" data-testid="confirm-ok">OK</button>
+            <button id="confirm-cancel" data-testid="confirm-cancel">キャンセル</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>

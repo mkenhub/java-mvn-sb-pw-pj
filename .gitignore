@@ -42,6 +42,8 @@ build/
 node_modules/
 playwright-report/
 test-results/
+screenshots/
 ui-tests/node_modules/
 ui-tests/playwright-report/
 ui-tests/test-results/
+ui-tests/screenshots/
